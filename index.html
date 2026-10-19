@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aura – Cursor Effect Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stage">
+    <div class="bg" id="bg"></div>
+    <div class="spot" id="spot"></div>
+    <canvas id="fx"></canvas>
+    <div class="vignette"></div>
+  </div>
+
+  <header class="nav">
+    <a href="#" class="logo">AURA</a>
+    <nav>
+      <a href="#" data-view="home">Welcome</a>
+      <a href="#">About</a>
+      <a href="#">Gallery</a>
+      <a href="#feedback" data-view="feedback">Feedback</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <span class="welcome">Welcome</span>
+    <h1>Unleash your power</h1>
+    <p>Move your mouse and the page answers back. Click anywhere to send out a shockwave.</p>
+    <a href="#feedback" class="btn" data-view="feedback">Give feedback</a>
+  </main>
+
+  <section class="feedback" id="feedback" aria-hidden="true">
+    <form class="card" id="fbForm">
+      <h2>Feedback</h2>
+      <p class="sub">Welcome! Tell us what you think of Aura.</p>
+      <label>Name <input type="text" id="fbName" placeholder="Your name" required></label>
+      <label>Rating
+        <div class="stars" id="stars" role="radiogroup" aria-label="Rating">
+          <button type="button" data-v="1">★</button><button type="button" data-v="2">★</button><button type="button" data-v="3">★</button><button type="button" data-v="4">★</button><button type="button" data-v="5">★</button>
+        </div>
+      </label>
+      <label>Message <textarea id="fbMsg" rows="4" placeholder="Write your feedback..." required></textarea></label>
+      <div class="actions">
+        <button type="submit" class="btn">Send feedback</button>
+        <a href="#" class="back" data-view="home">← Back to welcome</a>
+      </div>
+      <p class="thanks" id="thanks">Thank you! Your feedback was received.</p>
+    </form>
+  </section>
+
+  <div class="ring" id="ring"></div>
+  <div class="dot" id="dot"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
